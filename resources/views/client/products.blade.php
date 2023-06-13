@@ -1,6 +1,5 @@
 @extends('layouts.client.main')
 
-
 @section('content')
 <br><br><br>
 @csrf

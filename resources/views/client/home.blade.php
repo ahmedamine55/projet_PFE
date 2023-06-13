@@ -10,13 +10,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ asset("carousel\alissa-de-leva-DeM8mEQf138-unsplash (1).jpg") }}" alt="First slide">
+                <img class="d-block w-100" src="{{ asset("carousel\Jewelry_Gray_background_Brown_haired_Hands_Glance_586068_1280x785.jpg") }}" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://images.unsplash.com/photo-1599459183200-59c7687a0275?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=335&q=80" alt="Second slide">
+                <img class="d-block w-100" src="{{ asset("carousel\Jewelry_White_background_Hands_Makeup_Hairstyle_577216_1280x853.jpg") }}" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="Third slide">
+                <img class="d-block w-100" src="{{ asset("carousel\Jewelry_Gray_background_Face_Earrings_Hands_564025_1280x830.jpg") }}" alt="Third slide">
             </div>
         </div>
         <a href="#carouselExample" class="carousel-control-prev" role="button" data-slide="prev">

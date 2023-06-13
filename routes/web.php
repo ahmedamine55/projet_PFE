@@ -3,7 +3,8 @@
 use App\Http\Controllers\Admin\CheckArticleController;
 use App\Http\Controllers\ClientController;
 
-Route::redirect('/', '/login');
+// Route::redirect('/', '/login');
+Route::redirect('/', '/blingstyle');
 Route::get('/home', function () {
     if (session('status')) {
         return redirect()->route('admin.home')->with('status', session('status'));
@@ -73,6 +74,8 @@ Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 
 Route::prefix('blingstyle')->group(function () {
     Route::get( '/', 'ClientController@home')->name("client.acceuil");
     Route::get( '/products', 'ClientController@products')->name("client.products");
+    Route::get( '/products/filter', 'ClientController@filtredProducts')->name("client.filtredProducts");
+    Route::get( '/importCategorie', 'ClientController@importCategorie')->name("client.importCategorie");
     Route::get( '/products/productdetails/{id}', 'ClientController@pdetails')->name("client.pdetails");
     Route::get( '/shops', 'ClientController@shops')->name("client.shops");
     Route::get( '/shops/shopdetails/{id}', 'ClientController@shop_details')->name("client.shop_details");

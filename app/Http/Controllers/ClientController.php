@@ -15,6 +15,29 @@ class ClientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function index()
+    {
+        $products = AddbBijoux::select()->where('verified', "old") ->get();
+        $categories = Categorie::all();
+        $types = Type::all();
+        return view("client.products",compact('products','categories','types'));
+    }
+
+
+    public function filtredProducts(Request $request){
+
+        if(!isset($_GET["type"]))
+            $products = AddbBijoux::select()->where('verified', "old") ->get();
+        else{
+        $type = $_GET["type"];
+        $products = AddbBijoux::whereHas('types', function($q) use ($type){
+            $q->whereIn('name', $type);
+        })->get();
+        }
+        return view("client.categories_veiw",compact('products'));
+
+    }
+
     public function home()
     {
         return view("client.home");
